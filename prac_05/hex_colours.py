@@ -15,6 +15,7 @@ COLOR_NAME_TO_HEX = {
 color_name = input("Enter color name: ").capitalize()
 while color_name != "":
     try:
+
         print(f"{color_name} is {COLOR_NAME_TO_HEX[color_name]}")
     except KeyError:
         print("Invalid color name")

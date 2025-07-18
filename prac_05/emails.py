@@ -16,6 +16,7 @@ def main():
         if confirmation not in ("", "y", "yes"):
             name = input("Name: ")
         else:
+
             name = default_name
         email_to_name[email] = name
         email = input("Email: ")

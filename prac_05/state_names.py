@@ -10,6 +10,7 @@ CODE_TO_NAME = {
     "SA": "South Australia"
 }
 
+
 # Print all state codes and names, neatly formatted
 for code, name in CODE_TO_NAME.items():
     print(f"{code:>3} is {name}")
