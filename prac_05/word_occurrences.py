@@ -15,6 +15,7 @@ for word in words:
     else:
         word_counts[word] = 1
 
+
 # Determine the length of the longest word for alignment
 max_length = max(len(word) for word in word_counts)
 

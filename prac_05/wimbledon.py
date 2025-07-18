@@ -17,6 +17,7 @@ def read_wimbledon_data(filename):
 def count_champions(data):
     """Return a dictionary mapping champions to the number of times they won."""
     champion_to_count = {}
+
     for champion, _ in data:
         if champion in champion_to_count:
             champion_to_count[champion] += 1
