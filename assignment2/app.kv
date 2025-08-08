@@ -1,0 +1,62 @@
+BoxLayout:
+    orientation: 'horizontal'
+    padding: 10
+    spacing: 10
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 10
+        size_hint_x: 0.4
+
+        Label:
+            text: "Sort by (not implemented yet)"
+            size_hint_y: None
+            height: 30
+
+        TextInput:
+            id: input_title
+            hint_text: "Title"
+            multiline: False
+
+        TextInput:
+            id: input_year
+            hint_text: "Year"
+            multiline: False
+            input_filter: 'int'
+
+        TextInput:
+            id: input_category
+            hint_text: "Category"
+            multiline: False
+
+        Button:
+            text: "Add Movie"
+            on_press: app.add_movie()
+
+        Button:
+            text: "Clear"
+            on_press: app.clear_inputs()
+
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 5
+        size_hint_x: 0.6
+
+        Label:
+            id: movie_count_label
+            text: "Watched: 0 | To Watch: 0"
+            size_hint_y: None
+            height: 30
+
+        ScrollView:
+            GridLayout:
+                id: movies_box
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+
+        Label:
+            id: status_label
+            text: ""
+            size_hint_y: None
+            height: 30
